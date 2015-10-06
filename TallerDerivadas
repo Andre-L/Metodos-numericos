@@ -1,0 +1,56 @@
+import math
+import numpy as np
+import matplotlib.pyplot as plt
+print "Ingrese el valor de h"
+h=input()
+x=-5
+cad1="(e^x)-1"
+cad2="sen^3(2x)+x^2"
+cad3="x^4+3x^2-cos(x)"
+
+def f(x,cont):
+    if(cont==0):
+        return (math.exp(x))-1
+    elif(cont==1):
+        return ((math.sin(2*x))**3)+(x**2)
+    else:
+        return (x**4)+3*(x**2)-math.cos(x)
+    
+def fv(x,cont):
+    if(cont==0):
+        return (math.exp(x))
+    elif(cont==1):
+        return ((3*((math.sin(2*x))**2))*(math.cos(2*x))*2)+2*x
+    else:
+        return ((4*(x**3))+(6*x)+math.sin(x))
+
+print "1) e^x - 1"
+print "2) sen(2x)^3 +x^2 "
+print "3) x^4 +3x^2 - cos(x)"
+print ""
+def der1(x,h):
+    cont=0
+    #print "|%-5s|%-10s|%-10s|%-10s|%-10s|%-10s|%-10s|%-10s|%-10s|%-10s|%-10s|%-13s|%-13s|%-13s|%-13s|%-13s|%-13s|"%("----------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------","-------------") 
+    print "|%-7s|%-10s|%-10s|%-10s|%-10s||%-10s|%-10.5s|%-10s|%-10s|"%("Valor","Der Atras","Der Centrada","Der Delante","Der Verdadera","Error Ve","Err R","Err RP","Err VeA")
+    print "|%-5s|%-10s|%-10s|%-10s|%-10s||%-10s|%-10s|%-10s|%-10s|"%("-------","----------","------------","-----------","-------------","----------","---------","----------","----------") 
+    while (x!=5+h):
+        while(cont!=3):
+            der1=(((f(x,cont))-(f((x-h),cont)))/(h))
+            derv=fv(x,cont)
+            der2=(((f(x+h,cont))-(f((x-h),cont)))/(2*h))
+            der3=(((f(x+h,cont))-(f((x),cont)))/((x+h)-(x)))
+            err1=(f(x,cont))-(der1)
+            err2=((math.exp(x))-(der1))/(math.exp(x))
+            err3=(((math.exp(x))-(der1))/(math.exp(x)))*100
+            err4=abs(err1)
+            print "|%s)%-5.1f|%-10.5f|%-12f|%-11f|%-13f||%-10.5s|%-10.5s|%-10.5s|%-10.5s|"%(cont+1,x,der1,der2,der3,derv,err1,err2,err3,err4)
+            cont=cont+1
+            plt.plot(der1)
+        print chr(27)+"|%-5s|%-10s|%-10s|%-10s|%-10s||%-10s|%-10s|%-10s|%-10s|"%("-------","----------","------------","-----------","-------------","----------","---------","----------","----------")  
+        x+=h
+        cont=0
+        
+    return 0           
+
+        
+der1(x,h)
