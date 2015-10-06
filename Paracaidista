@@ -1,0 +1,30 @@
+import math
+tiemp=0
+g=float(9.8)
+m=0
+c=float(12.5)
+v=float(0.0)
+cont=0
+aux=float(0.0)
+print "Ingrese la cantidad de tiempo que desea calculas"
+tiemp=input()
+print "Ingrese la masa del paracaidista"
+m=float(input())
+
+print "Solución analitica"
+while cont<=tiemp:
+    aux= (c/m)*cont
+    #print aux
+    v=((g*m)/c)*(1-math.exp(-1*aux))
+    print v
+    cont+=1
+    
+ print "Solucion Aproximada"
+vA=float(0.0)
+cont=0
+while (con<=tiemp):
+    vA= con+(g-(c/m)*con)*((con+1)-con)
+
+    print vA
+    con+=1
+    
