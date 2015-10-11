@@ -1,0 +1,121 @@
+import math
+import numpy as np
+import matplotlib.pyplot as ptl
+
+ert1=[]
+ert2=[]
+ert3=[]
+era1=[]
+era2=[]
+era3=[]
+
+def f(x):
+    fun=(math.exp(-x))-x
+    return fun
+
+def df(x):
+    dfun=(-math.exp(-x))-1
+    return dfun
+
+def New_Rap():
+    global era1
+    global ert1
+    Xi=float(0)
+    xi=float(0)
+    i=0
+    cont=float(0)
+    real=0.56714329
+    errt=1
+    print "|%-7s|%-14s|%-11s|%-11s|"%("i","Xi","ErrT%","ErrA")
+    print "|%-7s|%-14s|%-11s|%-11s|"%("-------","--------------","-----------","-----------")
+
+    while(errt>0.000003):
+        #try:
+       
+        errt=abs((real-xi)/(real))*100
+        ert1.append(errt)
+        xi=Xi-((f(Xi))/(df(Xi)))
+        
+        erra=abs((xi-Xi)/(xi))*100
+        era1.append(erra)
+        cont=xi
+        
+        #except ZeroDivisionError:
+        print "|%-7d|%-14f|%-11f|%-11f|"%(i,Xi,errt,erra)
+        Xi=xi
+        i+=1
+    #print len(ert1)        
+def Met_Sec():
+    global era2
+    global ert2
+    X_1=0
+    x0=1
+    xi=1
+    real=0.56714329
+    i=0
+    errt=1
+    print "|%-7s|%-14s|%-11s|%-11s|"%("i","Xi","ErrT%","ErrA")
+    print "|%-7s|%-14s|%-11s|%-11s|"%("-------","--------------","-----------","-----------")
+    
+    while(errt>0.000003):
+   
+        xi1=(x0)-(((f(x0))*(X_1-x0))/(f(X_1)-f(x0)))
+        #rint xi1
+        errt=abs((real-xi1)/(real))*100
+        ert2.insert(i,errt)
+        erra=abs((xi1-x0)/(xi1))*100
+        era2.append(erra)
+        X_1=x0
+        x0=xi1
+        print "|%-7d|%-14f|%-11f|%-11f|"%(i,xi1,errt,erra)
+        i+=1
+def Met_Punto_Fijo():
+    global era
+    global ert
+    n=0
+    cont=float(0)
+    real=0.56714329
+    err=1
+    erra=100
+    aprox=0
+    while(err>0.0003):
+        err=abs(((real)-(aprox))/(real))*100
+        ert3.append(err)
+        aprox=math.exp(-cont)
+        era3.append(erra)
+        print "|%-6d |%-14f |%-10f |%-11f|"%(n,cont,erra,err)
+        erra=abs((aprox-cont)/(aprox))*100
+        cont=aprox
+        n+=1
+def graficar():
+    global era1
+    global era2
+    global ert1
+    global ert2
+    global era3
+    global ert3
+    ptl.plot(ert1,color='g',linestyle="--", label="ErrT Newton")
+    ptl.plot(ert2,color='b',linestyle="-",label="ErrT Secante")
+    ptl.plot(ert3,color='g',linestyle="-.",label="ErrT Punto Fijo")
+    ptl.legend(loc="upper right")
+    ptl.title("Error Relativo", fontsize = 20)
+    ptl.show()
+    
+    ptl.plot(era1,color='c',linestyle="--", label="ErrA Newton")
+    ptl.plot(era2,color='m',linestyle="-", label="ErrA Secante")
+    ptl.plot(ert3,color='g',linestyle="-.",label="ErrA Punto Fijo")
+    ptl.title("Error Aproximado", fontsize = 20)
+    ptl.legend(loc="upper right")
+    ptl.show()
+    
+
+
+print "Metodo de Newton Rapson"
+New_Rap()
+print ""
+print "Metodo de la Secante"
+Met_Sec()
+print ""
+print "Metodo Punto Fijo"
+Met_Punto_Fijo()
+graficar()
