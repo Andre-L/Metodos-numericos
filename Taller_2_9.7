@@ -1,0 +1,27 @@
+import math
+import numpy as np
+import matplotlib.pyplot as ptl
+#DESPEJANDO X1
+def grafica1():
+    x=np.arange(3,6,0.5)
+    y=(x-9.5)/0.5
+    z=(2*x-18.8)/(1.02)
+    ptl.plot(x,y,'violet')
+    ptl.plot(x,z,'Olive')
+    ptl.title("DESPEJANDO X1", fontsize = 20)
+    ptl.grid(True)
+    ptl.show()
+    
+def grafica2():
+    x=np.arange(-2,20,0.1)
+    t=(-9.5-0.5*x)/(-1)
+    r=(-18.8-1.02*x)/-2
+    ptl.plot(x,t,'Blue')
+    ptl.plot(x,r,'DeepPink')
+    ptl.title("DESPEJANDO X2", fontsize = 20)
+    ptl.grid(True)
+    ptl.show()
+
+    
+grafica1()
+grafica2()
