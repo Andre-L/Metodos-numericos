@@ -1,0 +1,772 @@
+#Taller Metodos Númericos - Capitulo 9
+##*Paula Andrea Velásquez Cardona*
+###*Codigo: 160003342*
+####*Metodos Númericos*
+##Problemas
+###9.1
+### a). Escriba en forma matricialel conjunto diguiente de ecuaciones
+\begin{bmatrix}
+     50 = 5x_3 + 2x_2\\
+     10 - x_1 = x_3\\
+      3X_2 + 8X_1 = 20
+\end{bmatrix}
+
+##### *Respuesta*
+
+\begin{bmatrix}
+    0 & 2 & 5 \\
+    1 & 0 & 1 \\
+    8 & 3 & 0
+\end{bmatrix}
+
+###b). Escriba la transpuesta de la matriz de coeficientes
+##### *Respuesta*
+
+\begin{bmatrix}
+    0 & 1 & 8 \\
+    2 & 0 & 3 \\
+    5 & 1 & 0
+    \end{bmatrix}
+
+###9.2 Ciertas matrices están definidas como sigue
+$$
+A = \left[
+\begin{array}{cc}
+    4 & 7 \\
+    1 & 2 \\
+    5 & 6 & 6
+    \end{array}
+\right]
+$$
+$$
+B = \left[
+\begin{array}{ccc}
+    4 & 3 & 7 \\
+    1 & 2 & 7\\
+    1 & 0 & 4
+    \end{array}
+\right]\n
+$$
+$$
+C = \left[
+\begin{array}{c}
+    3  \\
+    6  \\
+    1 
+    \end{array}
+\right]
+$$
+
+$$
+D = \left[
+\begin{array}{cccc}
+    9 & 4 & 3 & -6  \\
+    6 & -1 & 7 & 5 \\
+    \end{array}
+\right]
+$$
+
+
+$$
+E = \left[
+\begin{array}{ccc}
+    1 & 5 & 8 \\
+    7 & 2 & 3 \\
+    4 & 0 & 6
+    \end{array}
+\right]
+$$   
+
+$$
+F = \left[
+\begin{array}{ccc}
+    3 & 0 & 1 \\
+    1 & 7 & 2
+    \end{array}
+\right]
+$$
+
+$$
+G = \left[
+\begin{array}{ccc}
+    7 & 6 & 4
+    \end{array}
+\right]
+$$
+
+### En relacion con estas matrices responda las preguntas siguientes
+####a). ¿Cuales son las dimensiones de las matrices
+#####**Respuesta:**
+- A $_{3x2}$
+- B $_{3x3}$
+- C $_{3x1}$
+- D $_{2x4}$
+- E $_{3x3}$
+- F $_{2x3}$
+- G $_{1x3}$
+####b). Identifique las matrices cuadrada, columna y renglon
+#####*Respuesta:*
+- Cuadrada: B, E
+- Renglon: G
+- Columna: C
+####c). Cuales son los valores de los elementos:
+#####*Respuesta:*
+- $a_{12}$ = 7
+- $b_{23}$ = 7
+- $d_{32}$ = no existe
+- $e_{22}$ = 2
+- $f_{12}$ = 0
+- $g_{12}$ = 6
+####d). Ejecute las operaciones siguientes
+
+1. [E]+[B]
+#####*Respuesta:*
+\begin{bmatrix}
+    5 & 8 & 15 \\
+    8 & 4 & 10 \\
+    5 & 0 & 10
+    \end{bmatrix}
+    
+2. [A]+[F] 
+#####*Respuesta:*
+#####No se puede realizar la operación
+
+3. [B]-[E]
+#####*Respuesta:*
+\begin{bmatrix}
+    3& 2 & -1\\
+    -6 & 0 & 4 \\
+    -3 &0&-2
+    \end{bmatrix}
+    
+4. 7x[B]
+#####*Respuesta:*
+\begin{bmatrix}
+    28 & 21 & 49\\
+    7 & 14 & 49\\
+    7 & 0 & 28
+    \end{bmatrix}
+
+5. [E]x[B]
+#####*Respuesta:*
+\begin{bmatrix}
+    17 & 13 & 74\\
+    33 & 25 & 75 \\
+    22 & 12 & 52
+    \end{bmatrix}
+    
+6. ${C}^T$
+#####*Respuesta:*
+\begin{bmatrix}
+    3 & 6 & 1
+    \end{bmatrix}
+    
+7. [B]x[A]
+#####*Respuesta:*
+\begin{bmatrix}
+        54 & 76 \\
+        41 & 53 \\
+        24 & 31 
+    \end{bmatrix}
+    
+8. $[D]^T$
+#####*Respuesta:*
+\begin{bmatrix}
+    9 & 2 \\
+    4 & -1 \\
+    3 & 7 \\
+    -6 & 5
+    \end{bmatrix}
+    
+9. [A]x[C]
+#####*Respuesta:*
+##### No se puede calcular
+10. [I]x[B]
+#####*Respuesta:*
+\begin{bmatrix}
+    4 & 3 & 7\\
+    1 & 2 & 7 \\
+    1 & 0 & 4
+    \end{bmatrix}
+    
+11. $[E]^T$ [E]
+#####*Respuesta:*
+
+$$
+E^T = \left[
+\begin{array}{ccc}
+       1&7&4\\
+       5&2&0\\
+       8&3&6
+ \end{array}
+\right]
+$$
+
+$$
+E = \left[
+\begin{array}{ccc}
+    1 & 5 & 8 \\
+    7 & 2 & 3 \\
+    4 & 0 & 6\\
+ \end{array}
+\right]
+$$ 
+
+=$\\begin{bmatrix}
+    68 & 15 & 71\\
+    19 & 29 & 46 \\
+    53 & 46 & 109
+    \end{bmatrix}$
+    
+12. ${C}^T$ {C}
+#####*Respuesta:*
+$$
+C^T = \left[
+\begin{array}{ccc}
+    3 & 6 & 1
+ \end{array}
+\right]
+$$
+
+$$
+C^T = \left[
+\begin{array}{ccc}
+    3 \\ 6 \\ 1\\
+ \end{array}
+\right]
+$$
+=$\\begin{bmatrix}46\\end{bmatrix}$
+
+###9.3 Se definen tres matrices como sigue
+$$
+A = \left[
+\begin{array}{ccc}
+    1 & 6  \\
+    3 & 10 \\
+    7 & 4
+    \end{array}
+\right]
+$$
+
+$$
+B = \left[
+\begin{array}{ccc}
+    1 & 3  \\
+    0,5 & 2 
+    \end{array}
+\right]
+$$
+
+$$
+C = \left[
+\begin{array}{ccc}
+    2 & -2  \\
+    -3 & 1 \\
+    7 & 4
+    \end{array}
+\right]
+$$
+
+####a). Ejecute todas las multiplicaciones que sea posible calcular entre parejas de matrices
+- [A]x[B]
+$$
+\left[
+\begin{array}{ccc}
+    4 & 15  \\
+    8 & 29 \\
+    9 & 29
+    \end{array}
+\right]
+$$
+
+- [B]x[C]
+$$
+\left[
+\begin{array}{ccc}
+    -7 & 1  \\
+    -5 & 1 
+    \end{array}
+\right]
+$$
+
+- [A]x[E]
+$$
+\left[
+\begin{array}{ccc}
+    1 & 6  \\
+    3 & 10 \\
+    7 & 4
+    \end{array}
+\right]
+$$
+
+- [C]x[B]
+$$
+\left[
+\begin{array}{ccc}
+    1 & 6  \\
+    -2,5 & -9 
+    \end{array}
+\right]
+$$
+
+####b). Utilice el metodo del recuadro PT3.2 para justificar por qué no se puede multiplicar a las demás parejas.
+#####*Respuesta:*
+##### Es imposible multiplicar dos(2) matrices si el número de columnas de la primera matriz no es igual al número de columnas de la segunda matriz
+
+####c). Emplee los resultados del insciso (*a*) para ilustrar por qué es importante el orden de la multiplicación
+#####*Respuesta:*
+ $[B]*[A] \neq [A]*[B]$
+ 
+###9.4
+####Use el metodo grafico para resolver el siguiete sistema:
+\begin{align*}
+     4x_1 - 8x_2 = -24\\
+     x_1 + 6x_2 = 34
+\end{align*}
+import math
+import numpy as np
+import matplotlib.pyplot as ptl
+
+def grafica():
+    x=np.arange(3,6,0.5)
+    y=2*x-6
+    z=(34-6*x)
+    ptl.plot(x,y,'crimson',label='X1')
+    ptl.plot(x,z,'SpringGreen',label='X2')
+    ptl.title("Ejercicio 9.4", fontsize = 20)
+    ptl.legend(loc="upper right")
+    ptl.grid(True)
+    ptl.show()
+grafica()
+
+#### Compruebe el resultado por medio de sustituirlo en las ecuaciones
+#####*Respuesta:*
+$x_1$= $4$
+$x_2$=$5$
+#####Remplazando en la ecuación (1)
+\begin{align*}
+    4(4) - 8(5)=-24\\
+    16 - 40=-24
+\end{align*}
+#####Remplazando en la ecuación (2)
+\begin{align*}
+    4 + 6(5)=34\\
+    4 + 30=34
+\end{align*}
+
+###9.5
+####Dado el sistema de ecuaciones siguiente:
+\begin{align*}
+     -1.1x_1 + 10x_2 = 120\\
+     -2x_1 + 17.4x_2 = 174
+\end{align*}
+
+#####a). Resuélvalo gráficamente y compruebe el resultado con la sustitución en las ecuaciones
+
+import math
+import numpy as np
+import matplotlib.pyplot as ptl
+#DESPEJANDO X1
+def grafica1():
+    x=np.arange(10,100,0.5)
+    y=(120-10*x)/(-1.1)
+    z=(174-17.4*x)/(-2)
+    ptl.plot(x,y,'red',label='X1')
+    ptl.plot(x,z,'Blue',label='X2')
+    ptl.title("Ejercicio 9.5", fontsize = 20)
+    ptl.grid(True)
+    ptl.show()
+grafica1()
+
+
+      -19.14x_1 + 174x_2 = 2088\\
+  -\\  
+     -20x_1 + 174x_2 = 1740\\\\\hline
+     0.86x_1+&0=&348 
+   \end{align*}
+
+$x_2$= $\frac{348}{0.86}$ =$404.65$
+
+####Obteniendo así que:
+$x_1$=$56.51$
+$x_2$=$404.65$
+
+###9.6
+####Para el sistema de ecuaciones que sigue
+\begin{align*}
+     2x_2 + 5x_3 = 9\\
+     2x_1 x_2 + x_3 = 9 \\
+     3x_1 +x_2 = 10
+\end{align*}
+
+##### a). Calcule el determinante.
+$$
+\left[
+\begin{array}{ccc}
+    0 & 2 & 5  \\
+    2 & 1 & 1  \\
+    3 & 1 & 0
+    \end{array}
+\right]
+$$
+
+$$
+0 \left[
+\begin{array}{ccc}
+    1 & 1  \\
+    1 & 0 
+    \end{array}\right]
+$$
+$$
+-2 \left[
+\begin{array}{ccc}
+    2 & 1  \\
+    3 & 0 
+    \end{array}\right]
+$$
+$$
++5 \left[
+\begin{array}{ccc}
+    2 & 1  \\
+    3 & 1 
+    \end{array}\right]
+$$
+
+###D = 0+6−5=1
+####*Determinante=1*
+
+##### b). Use la regla de Cramer para encontrar cuál es el valor de las x
+####*Respuesta:*
+####Despejando x_1 tenemos que:
+$$
+\left[
+\begin{array}{ccc}
+    9 & 2 & 5  \\
+    9 & 1 & 1  \\
+    10 & 1 & 0
+    \end{array}
+\right]
+$$
+$$
+9 \left[
+\begin{array}{ccc}
+    1 & 1  \\
+    1 & 0 
+    \end{array}\right]
+$$
+$$
+-2 \left[
+\begin{array}{ccc}
+    9 & 1  \\
+    10 & 0 
+    \end{array}\right]
+$$
+
+$$
++5 \left[
+\begin{array}{ccc}
+    9 & 1  \\
+    10 & 1 
+    \end{array}\right]
+$$
+  
+\begin{align*}
+    x_1=−9+20−5=6 \\
+    x_1=6
+\end{align*}
+
+####Despejando $x_2$ tenemos que:
+$$
+\left[
+\begin{array}{ccc}
+    0 & 9 & 5  \\
+    2 & 9 & 1  \\
+    3 & 10 & 0
+    \end{array}
+\right]
+$$
+
+$$
+0 \left[
+\begin{array}{ccc}
+    9 & 1  \\
+    10 & 0 
+    \end{array}\right]$$
+
+$$
+-9 \left[
+\begin{array}{ccc}
+    2 & 1  \\
+    3 & 0 
+    \end{array}\right]$$
+
+$$
++5 \left[
+\begin{array}{ccc}
+    2 & 9  \\
+    3 & 10 
+    \end{array}\right]$$
+    
+\begin{align*}
+    x_2=0+27−35=-8 \\
+    x_2=-8
+\end{align*}
+
+####Despejando $x_3$ tenemos que:
+$$
+\left[
+\begin{array}{ccc}
+    0 & 2 & 9  \\
+    2 & 1 & 9  \\
+    3 & 1 & 10
+    \end{array}
+\right]$$
+
+$$ 0 \left[
+\begin{array}{ccc}
+    1 & 9  \\
+    1 & 10 
+    \end{array}
+  \right]$$
+
+$$ -2 \left[
+\begin{array}{ccc}
+    2 & 9  \\
+    3 & 10 
+    \end{array}
+   \right]$$
+    
+$$ +9 \left[
+\begin{array}{ccc}
+    2 & 9  \\
+    3 & 10 
+    \end{array}\right]$$
+    
+\begin{align*}
+    x_3=0+14−9=5 \\
+    x_3=5
+\end{align*}
+
+##### c). Sustituya el resultado en las ecuaciones originales para efectos de comprobación
+#####*Respuesta:*
+#######*Sustituyendo en la 1era ecuación*
+\begin{align*}
+    2(-8) + 5(5)=9 \\
+    -16 + 25 = 9
+\end{align*}
+
+#######*Sustituyendo en la 2da ecuación*
+\begin{align*}
+    2(6) - 8 + 5 =9 \\
+    12 - 8 + 5 = 9
+\end{align*}
+
+#######*Sustituyendo en la 3era ecuación*
+\begin{align*}
+    3(6) - 8 =10 \\
+    18 - 8 = 10
+\end{align*}
+
+###9.7
+####Dadas las ecuaciones
+\begin{align*}
+     0.5x_1 - x_2 = -9.5\\
+     1.02x_1 - 2x_2 = -18.8
+\end{align*}
+##### a).Resuelva en forma gráfica.
+
+import math
+import numpy as np
+import matplotlib.pyplot as ptl
+    
+def grafica2():
+    x=np.arange(-2,40,0.1)
+    t=(-9.5-0.5*x)/(-1)
+    r=(-18.8-1.02*x)/-2
+    ptl.plot(x,t,'Blue',label='X2')
+    ptl.plot(x,r,'DeepPink',label='X1')
+    ptl.title("Ejercicio 9.7", fontsize = 20)
+    ptl.grid(True)
+    ptl.show()
+
+grafica2()
+
+##### b). Calcule el determinante
+
+$$ 
+D=\left[
+\begin{array}{ccc}
+    0.5 & -1  \\
+    1.02 & -2 
+    \end{array}\right]$$
+    
+#### D= $(0.5)(-2) - (1.02)(-1)$
+#### D= $(-1) - (-1.02)$
+#### D= $0.02$
+
+##### c). Con base en los incisos *a)* y *b)* , ¿qué es de esperarse con respecto de la condición del sistema?
+#### *Respuesta:*
+##### En los incisos a) & b) se espera que hayan infinitas soluciones
+
+##### d). Resuelva por medio de eliminacion de incógnitas.
+$$ 
+\left[
+\begin{array}{ccc}
+    0.5 & -1 = -9.5 \\
+    1.02 & -2 = -18.8
+    \end{array}\right]$$
+    
+####Despejando  $x_1$
+#### Multipliacando la ecuación (1)* -2 & la ecuación (2)* -1
+
+\begin{align*}
+      -1x_1 + 2x_2 = 19\\
+  -\\  
+     -1.02x_1 + 2x_2 = 18.8\\\\\hline
+     0.02x_1-&0=&0.2
+   \end{align*}
+$x_1$= $\frac{0.2}{0.02}$ =$10$
+#### Despejando $x_2$
+#### Multiplicando la ecuacion (1)* 1.02  & la ecuación (2)* 0.5
+\begin{align*}
+      0.51x_1 - 1.02x_2 = -9.69\\
+  -\\  
+     0.51x_1 - 1x_2 = -9.4\\\\\hline
+     0-&0.02=&-0.29
+   \end{align*}
+$x_2$= $\frac{-0.29}{-0.02}$ =$14.5$
+
+####Obteniendo así que:
+$x_1$=$10$
+$x_2$=$14.5$
+
+##### e). Resuelva otra vez, pero modifique ligeramente el elemento $a_{11}$ a $0.52$. Interprete sus resultados.
+$$ 
+\left[
+\begin{array}{ccc}
+    0.52 & -1 = -9.5 \\
+    1.02 & -2 = -18.8
+    \end{array} 
+   \right]$$
+   
+#####Despejando $X_1$
+#### Multiplicando la ecuación (1)* -2 & la ecuación (2)* -1
+
+\begin{align*}
+      -1.04x_1 + 2x_2 = 19\\
+  -\\  
+     -1.02x_1 + 2x_2 = 18.8\\\\\hline
+     -0.02x_1-&0=&0.2
+   \end{align*}
+$x_1$= $\frac{0.2}{-0.02}$ =$-10$
+
+#### Despejando $x_2$
+#### Multiplicando la ecuacion (1)* 1.02  & la ecuación (2)* 0.52
+
+\begin{align*}
+      0.5304x_1 - 1.02x_2 = -9.69\\
+  -\\  
+     0.5304x_1 - 1.04x_2 = -9.776\\\\\hline
+     0+&0.02=&0.086
+   \end{align*}
+$x_2$= $\frac{0.086}{0.02}$ =$4.3$
+
+####Obteniendo así que:
+$x_1$=$-10$
+$x_2$=$4.3$
+
+###9.8
+#### Dadas las ecuaciones siguientes
+\begin{align*}
+    (1)   10x_1 + 2x_2 - x_3 = 27\\
+    (2)  -3x_1 - 6x_2 + 2x_3 = -61.5\\
+    (3)   x_1 + x_2 + 5x_3 = 21.5
+\end{align*}
+
+##### a). Resuelva por eliminación  de Gauss simple. Efectúe todos los pasos del cálculo
+####*Respuesta:*
+
+- Multiplicando la ecuación (1)* $\frac{-3}{10}$ y se resta la ecuación (2)
+\begin{align*}
+    -3x_1 - 0.6x_2 + 0.3x_3= -8.1
+\end{align*}
+
+\begin{align*}
+    (1)   10x_1 + 2x_2 - x_3 = 27\\
+    (2)   0 - 5.4x_2 + 1.7x_3 = -53.4\\
+    (3)   x_1 + x_2 + 5x_3 = 21.5
+\end{align*}
+
+- Multiplicando la ecuacion (1)* $\frac{1}{10}$ y se resta la ecuación (3)
+\begin{align*}
+    x_1 + 0.2x_2 - 0.1x_3= 2.7
+\end{align*}
+
+\begin{align*}
+    (1)   10x_1 + 2x_2 - x_3 = 27\\
+    (2)   0 - 5.4x_2 + 1.7x_3 = -53.4\\
+    (3)   0 + 0.8x_2 + 5.1x_3 = -24.2
+\end{align*}
+
+- Multiplicando la ecuación (2)*$\frac{-0.8}{5.4}$ y se resta la ecuación (3)
+\begin{align*}
+    0 + 0.8x_{2} -\frac{34}{135}x_3= \frac{356}{45}
+\end{align*}
+
+\begin{align*}
+    (1)   10x_1 + 2x_2 - x_3 = 27\\
+    (2)   0 - 5.4x_2 + 1.7x_3 = -53.4\\
+    (3)   0 + 0 + \frac{289}{54}x_3 = -\frac{289}{9}
+\end{align*}
+
+- Despejando $x_3$ de la ecuacion (3)
+\begin{align*}
+    \frac{289}{54}x_3= -\frac{289}{9}\\
+    x_{3}=\frac{\frac{-289}{9}}{\frac{289}{54}}\\
+    x_{3}=-6
+\end{align*}
+
+ 
+- Con el valor de $x_3$ lo sustituimos en la ecuacion (2) y despejamos $x_2$
+\begin{align*}
+    -5.4x_2+1.7(-6)=-53.4\\
+    -5.4x_2-10.2=-53.4\\
+    x_{2}=\frac{-53.4+10.2}{-5.4}\\
+    x_{2}=8
+\end{align*} 
+
+- Con el varlo de $x_{3}$ y $x_{2}$ lo sustituimos en la ecuacion (1) para así despejar $x_{1}$
+
+\begin{align*}
+    10x_{1}+2(8)+6=27\\
+    10x_{1}+16+6=27\\
+    10x_{1}+22=27\\
+    x_{1}=\frac{27-22}{10}\\
+    x_{1}=0.5
+\end{align*} 
+
+####Obteniendo los valores de las incognitas:
+$x_{1}=0.5$
+$x_{2}=8$
+$x_{3}=-6$
+
+##### b). Sustituya los resultados en las ecuaciones originales a fin de comprobar sus respuestas
+
+####*Remplazando en la ecuación (1)*
+
+\begin{align*}
+    10(0.5) + 2(8) - (-6) = 27\\
+    5 + 16 + 6 =27
+\end{align*}  
+
+####*Remplazando en la ecuación (2)*
+\begin{align*}
+    -3(0.5) - 6(8) + 2(-6) = -61.5\\
+    -1.5 - 48 - 12 = -61.5
+\end{align*}  
+####*Remplazando en la ecuación (3)*
+\begin{align*}
+    (0.5) + (8) + 5(-6) = 21.5\\
+    0.5 + 8 - 30 = 21.5
+   \end{align*} 
